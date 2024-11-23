@@ -1,0 +1,188 @@
+{
+  "name": "@azem/types",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/meza.git",
+    "directory": "packages/common/types"
+  },
+  "license": "Apache-2.0",
+  "author": "@ingniius <ingniius@pm.me>",
+  "contributors": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "homepage": "https://github.com/ingniius/meza#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/meza/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "source": "./dist/index.ts",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./accountability": {
+      "types": "./dist/accountability.d.ts",
+      "require": "./dist/accountability.cjs",
+      "import": "./dist/accountability.mjs"
+    },
+    "./collection": {
+      "types": "./dist/collection.d.ts",
+      "require": "./dist/collection.cjs",
+      "import": "./dist/collection.mjs"
+    },
+    "./event": {
+      "types": "./dist/event.d.ts",
+      "require": "./dist/event.cjs",
+      "import": "./dist/event.mjs"
+    },
+    "./field": {
+      "types": "./dist/field.d.ts",
+      "require": "./dist/field.cjs",
+      "import": "./dist/field.mjs"
+    },
+    "./file": {
+      "types": "./dist/file.d.ts",
+      "require": "./dist/file.cjs",
+      "import": "./dist/file.mjs"
+    },
+    "./filter": {
+      "types": "./dist/filter.d.ts",
+      "require": "./dist/filter.cjs",
+      "import": "./dist/filter.mjs"
+    },
+    "./flow": {
+      "types": "./dist/flow.d.ts",
+      "require": "./dist/flow.cjs",
+      "import": "./dist/flow.mjs"
+    },
+    "./generic": {
+      "types": "./dist/generic.d.ts",
+      "require": "./dist/generic.cjs",
+      "import": "./dist/generic.mjs"
+    },
+    "./geometry": {
+      "types": "./dist/geometry.d.ts",
+      "require": "./dist/geometry.cjs",
+      "import": "./dist/geometry.mjs"
+    },
+    "./item": {
+      "types": "./dist/item.d.ts",
+      "require": "./dist/item.cjs",
+      "import": "./dist/item.mjs"
+    },
+    "./notification": {
+      "types": "./dist/notification.d.ts",
+      "require": "./dist/notification.cjs",
+      "import": "./dist/notification.mjs"
+    },
+    "./overview": {
+      "types": "./dist/overview.d.ts",
+      "require": "./dist/overview.cjs",
+      "import": "./dist/overview.mjs"
+    },
+    "./permission": {
+      "types": "./dist/permission.d.ts",
+      "require": "./dist/permission.cjs",
+      "import": "./dist/permission.mjs"
+    },
+    "./policy": {
+      "types": "./dist/policy.d.ts",
+      "require": "./dist/policy.cjs",
+      "import": "./dist/policy.mjs"
+    },
+    "./preset": {
+      "types": "./dist/preset.d.ts",
+      "require": "./dist/preset.cjs",
+      "import": "./dist/preset.mjs"
+    },
+    "./query": {
+      "types": "./dist/query.d.ts",
+      "require": "./dist/query.cjs",
+      "import": "./dist/query.mjs"
+    },
+    "./relation": {
+      "types": "./dist/relation.d.ts",
+      "require": "./dist/relation.cjs",
+      "import": "./dist/relation.mjs"
+    },
+    "./schema": {
+      "types": "./dist/schema.d.ts",
+      "require": "./dist/schema.cjs",
+      "import": "./dist/schema.mjs"
+    },
+    "./setting": {
+      "types": "./dist/setting.d.ts",
+      "require": "./dist/setting.cjs",
+      "import": "./dist/setting.mjs"
+    },
+    "./share": {
+      "types": "./dist/share.d.ts",
+      "require": "./dist/share.cjs",
+      "import": "./dist/share.mjs"
+    },
+    "./storage": {
+      "types": "./dist/storage.d.ts",
+      "require": "./dist/storage.cjs",
+      "import": "./dist/storage.mjs"
+    },
+    "./user": {
+      "types": "./dist/user.d.ts",
+      "require": "./dist/user.cjs",
+      "import": "./dist/user.mjs"
+    },
+    "./version": {
+      "types": "./dist/version.d.ts",
+      "require": "./dist/version.cjs",
+      "import": "./dist/version.mjs"
+    },
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepare": "[ ! -d dist ] && unbuild --stub || true",
+    "start": "unbuild --stub",
+    "build": "unbuild",
+    "check": "tsc --noEmit",
+    "format": "prettier src/**/*.ts --write --cache --cache-location node_modules/.cache/.prettiercache",
+    "lint": "eslint src/**/*.ts --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "clean": "rimraf dist .turbo node_modules"
+  },
+  "dependencies": {
+    "@azem/tokens": "workspace:*"
+  },
+  "peerDependencies": {
+    "geojson": ">=0.5",
+    "knex": ">=3"
+  },
+  "devDependencies": {
+    "@azem/eslint": "workspace:*",
+    "@azem/prettier": "workspace:*",
+    "@azem/typescript": "workspace:*",
+    "@types/geojson": "^7946.0.14",
+    "geojson": "^0.5.0",
+    "knex": "^3.1.0"
+  },
+  "prettier": "@azem/prettier/base",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "src/*"
+      ]
+    }
+  }
+}

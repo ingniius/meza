@@ -1,0 +1,86 @@
+{
+  "name": "@azem/errors",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/meza.git",
+    "directory": "packages/common/errors"
+  },
+  "license": "Apache-2.0",
+  "author": "@ingniius <ingniius@pm.me>",
+  "contributors": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "homepage": "https://github.com/ingniius/meza#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/meza/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "source": "./dist/index.ts",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./exceptions/*": "./dist/exceptions/*",
+    "./create-error": {
+      "types": "./dist/create-error.d.ts",
+      "require": "./dist/create-error.cjs",
+      "import": "./dist/create-error.mjs"
+    },
+    "./is-error": {
+      "types": "./dist/is-error.d.ts",
+      "require": "./dist/is-error.cjs",
+      "import": "./dist/is-error.mjs"
+    },
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepare": "[ ! -d dist ] && unbuild --stub || true",
+    "start": "unbuild --stub",
+    "build": "unbuild",
+    "check": "tsc --noEmit",
+    "format": "prettier src/**/*.ts --write --cache --cache-location node_modules/.cache/.prettiercache",
+    "lint": "eslint src/**/*.ts --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "test": "vitest run --passWithNoTests",
+    "clean": "rimraf coverage dist .turbo node_modules"
+  },
+  "dependencies": {
+    "@azem/enums": "workspace:*",
+    "@azem/types": "workspace:*",
+    "@azem/utils": "workspace:*"
+  },
+  "peerDependencies": {
+    "ms": ">=2"
+  },
+  "devDependencies": {
+    "@azem/eslint": "workspace:*",
+    "@azem/prettier": "workspace:*",
+    "@azem/testing": "workspace:*",
+    "@azem/typescript": "workspace:*",
+    "@types/ms": "^0.7.34",
+    "ms": "^2.1.3"
+  },
+  "prettier": "@azem/prettier/base",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "src/*"
+      ]
+    }
+  }
+}
