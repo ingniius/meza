@@ -1,0 +1,35 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`#messageConstructor > Invalid value (list) > should construct message for "nin" 1`] = `"Validation failed for field "test_field". Value can't be one of "valA", "valB", "valC"."`;
+
+exports[`#messageConstructor > Invalid value (primitive) > should construct message for "neq" 1`] = `"Validation failed for field "test_field". Value can't be "15"."`;
+
+exports[`#messageConstructor > No value > should construct message for "empty" 1`] = `"Validation failed for field "test_field". Value has to be empty."`;
+
+exports[`#messageConstructor > No value > should construct message for "nempty" 1`] = `"Validation failed for field "test_field". Value can't be empty."`;
+
+exports[`#messageConstructor > No value > should construct message for "nnull" 1`] = `"Validation failed for field "test_field". Value can't be null."`;
+
+exports[`#messageConstructor > No value > should construct message for "null" 1`] = `"Validation failed for field "test_field". Value has to be null."`;
+
+exports[`#messageConstructor > No value > should construct message for "regex" 1`] = `"Validation failed for field "test_field". Value doesn't have the correct format."`;
+
+exports[`#messageConstructor > No value > should construct message for "required" 1`] = `"Validation failed for field "test_field". Value is required."`;
+
+exports[`#messageConstructor > Substring > should construct message for "contains" 1`] = `"Validation failed for field "test_field". Value has to contain "test_substring"."`;
+
+exports[`#messageConstructor > Substring > should construct message for "icontains" 1`] = `"Validation failed for field "test_field". Value has to contain "test_substring"."`;
+
+exports[`#messageConstructor > Substring > should construct message for "ncontains" 1`] = `"Validation failed for field "test_field". Value can't contain "test_substring"."`;
+
+exports[`#messageConstructor > Valid value (list) > should construct message for "in" 1`] = `"Validation failed for field "test_field". Value has to be one of "valA", "valB", "valC"."`;
+
+exports[`#messageConstructor > Valid value (primitive) > should construct message for "eq" 1`] = `"Validation failed for field "test_field". Value has to be "15"."`;
+
+exports[`#messageConstructor > Valid value (primitive) > should construct message for "gt" 1`] = `"Validation failed for field "test_field". Value has to be greater than "15"."`;
+
+exports[`#messageConstructor > Valid value (primitive) > should construct message for "gte" 1`] = `"Validation failed for field "test_field". Value has to be greater than or equal to "15"."`;
+
+exports[`#messageConstructor > Valid value (primitive) > should construct message for "lt" 1`] = `"Validation failed for field "test_field". Value has to be less than "15"."`;
+
+exports[`#messageConstructor > Valid value (primitive) > should construct message for "lte" 1`] = `"Validation failed for field "test_field". Value has to be less than or equal to "15"."`;

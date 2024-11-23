@@ -1,0 +1,9 @@
+{
+  "extends": "@azem/typescript/base",
+  "compilerOptions": {
+    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
+    "types": ["@modyfi/vite-plugin-yaml/modules"]
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,182 @@
+{
+  "name": "@azem/functions",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/meza.git",
+    "directory": "packages/common/functions"
+  },
+  "license": "Apache-2.0",
+  "author": "@ingniius <ingniius@pm.me>",
+  "contributors": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "homepage": "https://github.com/ingniius/meza#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/meza/issues"
+  },
+  "private": false,
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "source": "./dist/index.ts",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./add-field-tag": {
+      "types": "./dist/add-field-tag.d.ts",
+      "require": "./dist/add-field-tag.cjs",
+      "import": "./dist/add-field-tag.mjs"
+    },
+    "./adjust-date": {
+      "types": "./dist/adjust-date.d.ts",
+      "require": "./dist/adjust-date.cjs",
+      "import": "./dist/adjust-date.mjs"
+    },
+    "./apply-options-data": {
+      "types": "./dist/apply-options-data.d.ts",
+      "require": "./dist/apply-options-data.cjs",
+      "import": "./dist/apply-options-data.mjs"
+    },
+    "./date-fn": {
+      "types": "./dist/date-fn.d.ts",
+      "require": "./dist/date-fn.cjs",
+      "import": "./dist/date-fn.mjs"
+    },
+    "./deep-map": {
+      "types": "./dist/deep-map.d.ts",
+      "require": "./dist/deep-map.cjs",
+      "import": "./dist/deep-map.mjs"
+    },
+    "./defu": {
+      "types": "./dist/defu.d.ts",
+      "require": "./dist/defu.cjs",
+      "import": "./dist/defu.mjs"
+    },
+    "./generate-joi": {
+      "types": "./dist/generate-joi.d.ts",
+      "require": "./dist/generate-joi.cjs",
+      "import": "./dist/generate-joi.mjs"
+    },
+    "./get-collection-type": {
+      "types": "./dist/get-collection-type.d.ts",
+      "require": "./dist/get-collection-type.cjs",
+      "import": "./dist/get-collection-type.mjs"
+    },
+    "./get-endpoint": {
+      "types": "./dist/get-endpoint.d.ts",
+      "require": "./dist/get-endpoint.cjs",
+      "import": "./dist/get-endpoint.mjs"
+    },
+    "./get-fields-from-template": {
+      "types": "./dist/get-fields-from-template.d.ts",
+      "require": "./dist/get-fields-from-template.cjs",
+      "import": "./dist/get-fields-from-template.mjs"
+    },
+    "./get-filter-operators-for-type": {
+      "types": "./dist/get-filter-operators-for-type.d.ts",
+      "require": "./dist/get-filter-operators-for-type.cjs",
+      "import": "./dist/get-filter-operators-for-type.mjs"
+    },
+    "./get-functions-for-type": {
+      "types": "./dist/get-functions-for-type.d.ts",
+      "require": "./dist/get-functions-for-type.cjs",
+      "import": "./dist/get-functions-for-type.mjs"
+    },
+    "./get-output-type-for-function": {
+      "types": "./dist/get-output-type-for-function.d.ts",
+      "require": "./dist/get-output-type-for-function.cjs",
+      "import": "./dist/get-output-type-for-function.mjs"
+    },
+    "./get-redacted-string": {
+      "types": "./dist/get-redacted-string.d.ts",
+      "require": "./dist/get-redacted-string.cjs",
+      "import": "./dist/get-redacted-string.mjs"
+    },
+    "./get-relation-type": {
+      "types": "./dist/get-relation-type.d.ts",
+      "require": "./dist/get-relation-type.cjs",
+      "import": "./dist/get-relation-type.mjs"
+    },
+    "./get-simple-hash": {
+      "types": "./dist/get-simple-hash.d.ts",
+      "require": "./dist/get-simple-hash.cjs",
+      "import": "./dist/get-simple-hash.mjs"
+    },
+    "./get-with-array": {
+      "types": "./dist/get-with-array.d.ts",
+      "require": "./dist/get-with-array.cjs",
+      "import": "./dist/get-with-array.mjs"
+    },
+    "./inject-function-result": {
+      "types": "./dist/inject-function-result.d.ts",
+      "require": "./dist/inject-function-result.cjs",
+      "import": "./dist/inject-function-result.mjs"
+    },
+    "./is-dynamic-variable": {
+      "types": "./dist/is-dynamic-variable.d.ts",
+      "require": "./dist/is-dynamic-variable.cjs",
+      "import": "./dist/is-dynamic-variable.mjs"
+    },
+    "./merge-filters": {
+      "types": "./dist/merge-filters.d.ts",
+      "require": "./dist/merge-filters.cjs",
+      "import": "./dist/merge-filters.mjs"
+    },
+    "./parse-filter": {
+      "types": "./dist/parse-filter.d.ts",
+      "require": "./dist/parse-filter.cjs",
+      "import": "./dist/parse-filter.mjs"
+    },
+    "./validate-payload": {
+      "types": "./dist/validate-payload.d.ts",
+      "require": "./dist/validate-payload.cjs",
+      "import": "./dist/validate-payload.mjs"
+    },
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepare": "[ ! -d dist ] && vite build --mode development || true",
+    "start": "vite build --mode development",
+    "build": "vite build --mode production",
+    "check": "tsc --noEmit",
+    "format": "prettier src/**/*.ts --write --cache --cache-location node_modules/.cache/.prettiercache",
+    "lint": "eslint src/**/*.ts --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "test": "vitest run",
+    "clean": "rimraf coverage dist .turbo node_modules"
+  },
+  "dependencies": {
+    "@azem/system": "workspace:*",
+    "@azem/tokens": "workspace:*",
+    "@azem/types": "workspace:*",
+    "@azem/utils": "workspace:*",
+    "date-fns": "^4.1.0",
+    "defu": "^6.1.4",
+    "joi": "^17.13.3",
+    "micromustache": "^8.0.3"
+  },
+  "peerDependencies": {},
+  "devDependencies": {},
+  "prettier": "@azem/prettier/base",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "src/*"
+      ]
+    }
+  }
+}

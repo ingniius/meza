@@ -1,0 +1,21 @@
+table: meza_extensions
+
+fields:
+  - collection: meza_extensions
+    field: id
+    special:
+      - uuid
+
+  - collection: meza_extensions
+    field: folder
+
+  - collection: meza_extensions
+    field: source
+
+  - collection: meza_extensions
+    field: bundle
+
+  - collection: meza_extensions
+    field: enabled
+    special:
+      - cast-boolean
