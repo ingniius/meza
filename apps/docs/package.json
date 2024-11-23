@@ -1,0 +1,52 @@
+{
+  "name": "@azem/docs",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/meza.git",
+    "directory": "apps/docs"
+  },
+  "license": "Apache-2.0",
+  "author": "@ingniius <ingniius@pm.me>",
+  "contributors": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "homepage": "https://github.com/ingniius/meza#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/meza/issues"
+  },
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "prepare": "nuxt prepare",
+    "start": "nuxt dev",
+    "build": "nuxt build",
+    "check": "tsc --noEmit",
+    "format": "prettier src/**/*.{ts,vue} --write --cache --cache-location node_modules/.cache/.prettiercache",
+    "lint": "eslint src/**/*.{ts,vue} --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "clean": "rimraf .nuxt .output .turbo node_modules"
+  },
+  "dependencies": {
+    "@nuxtjs/i18n": "^9.1.0",
+    "@pinia/nuxt": "^0.7.0"
+  },
+  "devDependencies": {
+    "@azem/eslint": "workspace:*",
+    "@azem/prettier": "workspace:*",
+    "@azem/typescript": "workspace:*",
+    "@nuxt/devtools": "^1.6.1",
+    "@nuxt/eslint": "^0.7.1",
+    "@nuxt/test-utils": "^3.14.4",
+    "nuxt": "^3.14.1592",
+    "vue": "^3.5.13"
+  },
+  "prettier": "@azem/prettier/base",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "src/*"
+      ]
+    }
+  }
+}

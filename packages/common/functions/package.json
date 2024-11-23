@@ -1,0 +1,111 @@
+{
+  "name": "@azem/functions",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/meza.git",
+    "directory": "packages/common/functions"
+  },
+  "license": "Apache-2.0",
+  "author": "@ingniius <ingniius@pm.me>",
+  "contributors": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "homepage": "https://github.com/ingniius/meza#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/meza/issues"
+  },
+  "private": false,
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "source": "./dist/index.ts",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./abbreviate-number": {
+      "types": "./dist/abbreviate-number.d.ts",
+      "require": "./dist/abbreviate-number.cjs",
+      "import": "./dist/abbreviate-number.mjs"
+    },
+    "./add-field-tag": {
+      "types": "./dist/add-field-tag.d.ts",
+      "require": "./dist/add-field-tag.cjs",
+      "import": "./dist/add-field-tag.mjs"
+    },
+    "./adjust-date": {
+      "types": "./dist/adjust-date.d.ts",
+      "require": "./dist/adjust-date.cjs",
+      "import": "./dist/adjust-date.mjs"
+    },
+    "./apply-options-data": {
+      "types": "./dist/apply-options-data.d.ts",
+      "require": "./dist/apply-options-data.cjs",
+      "import": "./dist/apply-options-data.mjs"
+    },
+    "./deep-map": {
+      "types": "./dist/deep-map.d.ts",
+      "require": "./dist/deep-map.cjs",
+      "import": "./dist/deep-map.mjs"
+    },
+    "./defu": {
+      "types": "./dist/defu.d.ts",
+      "require": "./dist/defu.cjs",
+      "import": "./dist/defu.mjs"
+    },
+    "./generate-joi": {
+      "types": "./dist/generate-joi.d.ts",
+      "require": "./dist/generate-joi.cjs",
+      "import": "./dist/generate-joi.mjs"
+    },
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepare": "[ ! -d dist ] && vite build --mode development || true",
+    "start": "vite build --mode development",
+    "build": "vite build --mode production",
+    "check": "tsc --noEmit",
+    "format": "prettier src/**/*.ts --write --cache --cache-location node_modules/.cache/.prettiercache",
+    "lint": "eslint src/**/*.ts --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "test": "vitest run",
+    "clean": "rimraf coverage dist .turbo node_modules"
+  },
+  "dependencies": {
+    "@azem/system": "workspace:*",
+    "@azem/tokens": "workspace:*",
+    "@azem/types": "workspace:*",
+    "@azem/utils": "workspace:*",
+    "date-fns": "^4.1.0",
+    "defu": "^6.1.4",
+    "joi": "^17.13.3",
+    "micromustache": "^8.0.3"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@azem/eslint": "workspace:*",
+    "@azem/prettier": "workspace:*",
+    "@azem/typescript": "workspace:*"
+  },
+  "prettier": "@azem/prettier/base",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "src/*"
+      ]
+    }
+  }
+}

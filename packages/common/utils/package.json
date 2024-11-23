@@ -1,0 +1,112 @@
+{
+  "name": "@azem/utils",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/meza.git",
+    "directory": "packages/common/utils"
+  },
+  "license": "Apache-2.0",
+  "author": "@ingniius <ingniius@pm.me>",
+  "contributors": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "homepage": "https://github.com/ingniius/meza#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/meza/issues"
+  },
+  "private": false,
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "source": "./dist/index.ts",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./array": {
+      "types": "./dist/array.d.ts",
+      "require": "./dist/array.cjs",
+      "import": "./dist/array.mjs"
+    },
+    "./assertion": {
+      "types": "./dist/assertion.d.ts",
+      "require": "./dist/assertion.cjs",
+      "import": "./dist/assertion.mjs"
+    },
+    "./charset": {
+      "types": "./dist/charset.d.ts",
+      "require": "./dist/charset.cjs",
+      "import": "./dist/charset.mjs"
+    },
+    "./compress": {
+      "types": "./dist/compress.d.ts",
+      "require": "./dist/compress.cjs",
+      "import": "./dist/compress.mjs"
+    },
+    "./json": {
+      "types": "./dist/json.d.ts",
+      "require": "./dist/json.cjs",
+      "import": "./dist/json.mjs"
+    },
+    "./lodash": {
+      "types": "./dist/lodash.d.ts",
+      "require": "./dist/lodash.cjs",
+      "import": "./dist/lodash.mjs"
+    },
+    "./pluralize": {
+      "types": "./dist/pluralize.d.ts",
+      "require": "./dist/pluralize.cjs",
+      "import": "./dist/pluralize.mjs"
+    },
+    "./transform": {
+      "types": "./dist/transform.d.ts",
+      "require": "./dist/transform.cjs",
+      "import": "./dist/transform.mjs"
+    },
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepare": "[ ! -d dist ] && vite build --mode development || true",
+    "start": "vite build --mode development",
+    "build": "vite build --mode production",
+    "check": "tsc --noEmit",
+    "format": "prettier src/**/*.ts --write --cache --cache-location node_modules/.cache/.prettiercache",
+    "lint": "eslint src/**/*.ts --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "test": "vitest run",
+    "clean": "rimraf coverage dist .turbo node_modules"
+  },
+  "dependencies": {
+    "@azem/tokens": "workspace:*",
+    "@azem/types": "workspace:*",
+    "lodash-es": "^4.17.21"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@azem/eslint": "workspace:*",
+    "@azem/prettier": "workspace:*",
+    "@azem/typescript": "workspace:*",
+    "@types/lodash-es": "^4.17.12"
+  },
+  "prettier": "@azem/prettier/base",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "src/*"
+      ]
+    }
+  }
+}

@@ -1,0 +1,116 @@
+table: meza_collections
+
+defaults:
+  collection: null
+  hidden: false
+  singleton: false
+  icon: null
+  note: null
+  translations: null
+  display_template: null
+  accountability: "all"
+
+data:
+  - collection: meza_access
+    icon: admin_panel_settings
+    note: $t:meza_collection.meza_access
+    display_template: "{{ policy.name }}"
+    sort_field: sort
+
+  - collection: meza_activity
+    note: $t:meza_collection.meza_activity
+    accountability: null
+
+  - collection: meza_collections
+    icon: database
+    note: $t:meza_collection.meza_collections
+
+  - collection: meza_comments
+    note: $t:meza_collection.meza_comments
+
+  - collection: meza_fields
+    icon: input
+    note: $t:meza_collection.meza_fields
+
+  - collection: meza_files
+    icon: folder
+    note: $t:meza_collection.meza_files
+    display_template: "{{ $thumbnail }} {{ title }}"
+
+  - collection: meza_folders
+    note: $t:meza_collection.meza_folders
+    display_template: "{{ name }}"
+
+  - collection: meza_migrations
+    note: $t:meza_collection.meza_migrations
+
+  - collection: meza_permissions
+    icon: admin_panel_settings
+    note: $t:meza_collection.meza_permissions
+
+  - collection: meza_policies
+    icon: admin_panel_settings
+    note: $t:meza_collection.meza_policies
+
+  - collection: meza_presets
+    icon: bookmark
+    note: $t:meza_collection.meza_presets
+    accountability: null
+
+  - collection: meza_relations
+    icon: merge_type
+    note: $t:meza_collection.meza_relations
+
+  - collection: meza_revisions
+    note: $t:meza_collection.meza_revisions
+    accountability: null
+
+  - collection: meza_roles
+    icon: supervised_user_circle
+    note: $t:meza_collection.meza_roles
+
+  - collection: meza_sessions
+    note: $t:meza_collection.meza_sessions
+
+  - collection: meza_settings
+    singleton: true
+    note: $t:meza_collection.meza_settings
+
+  - collection: meza_users
+    archive_field: status
+    archive_value: archived
+    unarchive_value: draft
+    icon: people_alt
+    note: $t:meza_collection.meza_users
+    display_template: "{{ first_name }} {{ last_name }}"
+
+  - collection: meza_webhooks
+    note: $t:meza_collection.meza_webhooks
+
+  - collection: meza_dashboards
+    note: $t:meza_collection.meza_dashboards
+
+  - collection: meza_panels
+    note: $t:meza_collection.meza_panels
+
+  - collection: meza_notifications
+    note: $t:meza_collection.meza_notifications
+
+  - collection: meza_shares
+    icon: share
+    note: $t:meza_collection.meza_shares
+
+  - collection: meza_flows
+    note: $t:meza_collection.meza_flows
+
+  - collection: meza_operations
+    note: $t:meza_collection.meza_operations
+
+  - collection: meza_translations
+    note: $t:meza_collection.meza_translations
+
+  - collection: meza_versions
+    note: $t:meza_collection.meza_versions
+
+  - collection: meza_extensions
+    note: $t:meza_collection.meza_extensions

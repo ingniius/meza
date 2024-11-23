@@ -1,0 +1,47 @@
+{
+  "name": "@azem/admin",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/meza.git",
+    "directory": "apps/admin"
+  },
+  "license": "Apache-2.0",
+  "author": "@ingniius <ingniius@pm.me>",
+  "contributors": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "homepage": "https://github.com/ingniius/meza#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/meza/issues"
+  },
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "format": "prettier src/**/*.{ts,vue} --write --cache --cache-location node_modules/.cache/.prettiercache",
+    "lint": "eslint src/**/*.{ts,vue} --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "clean": "rimraf dist .turbo node_modules"
+  },
+  "dependencies": {
+    "pinia": "^2.2.6",
+    "vue": "^3.5.13",
+    "vue-i18n": "^10.0.4",
+    "vue-router": "^4.4.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@azem/eslint": "workspace:*",
+    "@azem/prettier": "workspace:*",
+    "@azem/typescript": "workspace:*"
+  },
+  "prettier": "@azem/prettier/base",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "src/*"
+      ]
+    }
+  }
+}

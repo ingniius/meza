@@ -1,0 +1,10 @@
+# meza_migrations isn't surfaced in the app, nor accessible from the API
+table: meza_migrations
+
+fields:
+  - collection: meza_migrations
+    field: version
+  - collection: meza_migrations
+    field: name
+  - collection: meza_migrations
+    field: timestamp

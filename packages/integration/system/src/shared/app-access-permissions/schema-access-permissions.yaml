@@ -1,0 +1,13 @@
+# @NOTE: Activity/collections/fields/presets/relations/revisions will have an extra hardcoded filter to filter out collections you don't have read access
+
+- collection: meza_collections
+  action: read
+
+- collection: meza_fields
+  action: read
+
+- collection: meza_relations
+  action: read
+
+- collection: meza_translations
+  action: read

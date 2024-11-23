@@ -1,0 +1,97 @@
+{
+  "name": "@azem/testing",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/meza.git",
+    "directory": "packages/integration/testing"
+  },
+  "license": "Apache-2.0",
+  "author": "@ingniius <ingniius@pm.me>",
+  "contributors": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "homepage": "https://github.com/ingniius/meza#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/meza/issues"
+  },
+  "private": false,
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "source": "./dist/index.ts",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./alpha": {
+      "types": "./dist/alpha.d.ts",
+      "require": "./dist/alpha.cjs",
+      "import": "./dist/alpha.mjs"
+    },
+    "./array": {
+      "types": "./dist/array.d.ts",
+      "require": "./dist/array.cjs",
+      "import": "./dist/array.mjs"
+    },
+    "./identifier": {
+      "types": "./dist/identifier.d.ts",
+      "require": "./dist/identifier.cjs",
+      "import": "./dist/identifier.mjs"
+    },
+    "./integer": {
+      "types": "./dist/integer.d.ts",
+      "require": "./dist/integer.cjs",
+      "import": "./dist/integer.mjs"
+    },
+    "./sequence": {
+      "types": "./dist/sequence.d.ts",
+      "require": "./dist/sequence.cjs",
+      "import": "./dist/sequence.mjs"
+    },
+    "./uuid": {
+      "types": "./dist/uuid.d.ts",
+      "require": "./dist/uuid.cjs",
+      "import": "./dist/uuid.mjs"
+    },
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepare": "[ ! -d dist ] && vite build --mode development || true",
+    "start": "vite build --mode development",
+    "build": "vite build --mode production",
+    "check": "tsc --noEmit",
+    "format": "prettier src/**/*.ts --write --cache --cache-location node_modules/.cache/.prettiercache",
+    "lint": "eslint src/**/*.ts --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "test": "vitest run",
+    "clean": "rimraf coverage dist .turbo node_modules"
+  },
+  "dependencies": {},
+  "peerDependencies": {},
+  "devDependencies": {
+    "@azem/eslint": "workspace:*",
+    "@azem/prettier": "workspace:*",
+    "@azem/typescript": "workspace:*"
+  },
+  "prettier": "@azem/prettier/base",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "src/*"
+      ]
+    }
+  }
+}
