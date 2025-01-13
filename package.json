@@ -7,5 +7,9 @@
   },
   "license": "Apache-2.0",
   "author": "@omaucf <omaucf@pm.me>",
-  "private": true
+  "private": true,
+  "homepage": "https://github.com/ingniius/meza#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/meza/issues"
+  }
 }
