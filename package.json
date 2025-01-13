@@ -1,0 +1,10 @@
+{
+  "name": "@azem/root",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/meza.git"
+  },
+  "author": "@omaucf <omaucf@pm.me>",
+  "private": true
+}
