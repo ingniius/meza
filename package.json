@@ -30,6 +30,7 @@
     "@manypkg/cli": "^0.23.0",
     "@turbo/gen": "^2.3.3",
     "@types/node": "^22.10.5",
+    "eslint": "catalog:",
     "husky": "^9.1.7",
     "prettier": "catalog:",
     "rimraf": "^6.0.1",
