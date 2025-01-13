@@ -1,0 +1,40 @@
+# Generated Outputs
+.cache
+
+# Compiled Outputs
+*.config.js.timestamp*
+*.config.ts.timestamp*
+dist
+
+# Environment
+.env
+.env.*
+!.env.d.ts
+!.env.example
+
+# Dependencies
+node_modules/
+package.json.*
+!package.json.hbs
+
+# Testing
+coverage/
+tmp/
+.coverage*
+
+# Logs
+*.log
+
+# IDE
+.vscode/*
+.idea
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# System Files
+.DS_Store
+*.pem
+
+# Workspace Files
+.turbo
+.todo
