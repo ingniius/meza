@@ -1,0 +1,7 @@
+*
+!dist/**/*.cjs
+!dist/**/*.d.ts
+!dist/**/*.mjs
+!package.json
+!LICENSE.md
+!README.md

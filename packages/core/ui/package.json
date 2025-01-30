@@ -1,0 +1,79 @@
+{
+  "name": "@azem/ui",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/meza.git",
+    "directory": "packages/core/ui"
+  },
+  "license": "Apache-2.0",
+  "author": "@ingniius <ingniius@pm.me>",
+  "contributors": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "homepage": "https://github.com/ingniius/meza#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/meza/issues"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/module.cjs",
+  "module": "./dist/module.mjs",
+  "source": "./dist/module.ts",
+  "types": "./dist/module.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/module.d.ts",
+      "require": "./dist/module.cjs",
+      "import": "./dist/module.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepare": "nuxt-module-build prepare",
+    "start": "nuxt-module-build build --stub",
+    "build": "nuxt-module-build build",
+    "check": "nuxt typecheck --noEmit",
+    "format": "prettier src/**/* --write --cache --cache-location .cache/.prettiercache",
+    "lint": "eslint src/**/* --fix --cache --cache-location .cache/.eslintcache",
+    "test": "vitest run --passWithNoTests",
+    "clean": "rimraf .nuxt .turbo coverage dist node_modules",
+    "postinstall": "[ ! -d dist ] && nuxt-module-build build --stub || true"
+  },
+  "dependencies": {
+    "@azem/tokens": "workspace:*",
+    "@azem/utils": "workspace:*",
+    "@iconify-json/lucide": "^1.2.25",
+    "@nuxt/image": "^1.9.0",
+    "@nuxt/ui": "~3.0.0-alpha.12",
+    "@vueuse/core": "^12.5.0",
+    "reka-ui": "1.0.0-alpha.9"
+  },
+  "peerDependencies": {
+    "defu": ">=6",
+    "nuxt": ">=3",
+    "vue": ">=3"
+  },
+  "devDependencies": {
+    "defu": "^6.1.4",
+    "nuxt": "catalog:",
+    "vue": "catalog:"
+  },
+  "prettier": "@azem/prettier/vue",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "src/*"
+      ]
+    }
+  }
+}

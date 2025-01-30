@@ -1,0 +1,36 @@
+{
+  "name": "@azem/admin",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/meza.git",
+    "directory": "apps/admin"
+  },
+  "license": "Apache-2.0",
+  "author": "@ingniius <ingniius@pm.me>",
+  "contributors": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "homepage": "https://github.com/ingniius/meza#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/meza/issues"
+  },
+  "main": "nuxt.config.ts",
+  "type": "module",
+  "scripts": {
+    "prepare": "nuxt prepare",
+    "start": "nuxt dev",
+    "start:preview": "nuxt start",
+    "build": "nuxt build",
+    "build:static": "nuxt generate",
+    "check": "nuxt typecheck --noEmit",
+    "format": "prettier server/**/* --write --cache --cache-location node_modules/.cache/.prettiercache",
+    "lint": "eslint server/**/* --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "clean": "rimraf .nuxt .output .turbo node_modules"
+  },
+  "dependencies": {
+    "@azem/engine": "workspace:*",
+    "@azem/ui": "workspace:*"
+  },
+  "prettier": "@azem/prettier/vue"
+}

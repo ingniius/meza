@@ -1,0 +1,8 @@
+{
+  "extends": "@azem/tsc/base",
+  "compilerOptions": {
+    "tsBuildInfoFile": ".cache/tsbuildinfo.json"
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}

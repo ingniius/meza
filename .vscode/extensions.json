@@ -1,7 +1,11 @@
 {
   "recommendations": [
+    "antfu.iconify",
+    "bradlc.vscode-tailwindcss",
     "aaron-bond.better-comments",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "prisma.prisma",
+    "vue.volar"
   ]
 }

@@ -23,22 +23,39 @@
     "clean": "turbo clean"
   },
   "devDependencies": {
+    "@azem/eslint": "workspace:*",
+    "@azem/prettier": "workspace:*",
+    "@azem/tsc": "workspace:*",
     "@changesets/changelog-git": "^0.2.0",
-    "@changesets/cli": "^2.27.11",
+    "@changesets/cli": "^2.27.12",
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
     "@manypkg/cli": "^0.23.0",
-    "@turbo/gen": "^2.3.3",
-    "@types/node": "^22.10.5",
+    "@nuxt/devtools": "2.0.0-beta.3",
+    "@nuxt/eslint": "^1.0.0",
+    "@nuxt/kit": "^3.15.4",
+    "@nuxt/module-builder": "^0.8.4",
+    "@nuxt/schema": "^3.15.4",
+    "@nuxt/test-utils": "^3.15.4",
+    "@turbo/gen": "^2.3.4",
+    "@types/node": "^22.12.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vitest/coverage-v8": "^3.0.4",
+    "@vue/test-utils": "^2.4.6",
     "eslint": "catalog:",
     "globby": "^14.0.2",
+    "happy-dom": "^16.7.3",
     "husky": "^9.1.7",
+    "nuxt": "catalog:",
     "prettier": "catalog:",
     "rimraf": "^6.0.1",
-    "turbo": "^2.3.3",
+    "turbo": "^2.3.4",
     "typescript": "catalog:",
     "vite": "catalog:",
-    "vite-plugin-dts": "^4.5.0"
+    "vite-plugin-dts": "^4.5.0",
+    "vitest": "catalog:",
+    "vue": "catalog:",
+    "vue-tsc": "catalog:"
   },
   "resolutions": {
     "rimraf": ">=6"
@@ -47,9 +64,10 @@
     "node": ">=18.0.0",
     "npm": ">=9.0.0"
   },
-  "packageManager": "pnpm@9.15.3",
+  "packageManager": "pnpm@9.15.4",
   "volta": {
     "node": "23.5.0",
-    "pnpm": "9.15.3"
-  }
+    "pnpm": "9.15.4"
+  },
+  "prettier": "@azem/prettier/base"
 }

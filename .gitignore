@@ -1,5 +1,9 @@
 # Generated Outputs
 .cache
+.data
+.nitro
+.nuxt
+.output
 
 # Compiled Outputs
 *.config.js.timestamp*

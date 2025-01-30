@@ -1,0 +1,34 @@
+{
+  "name": "@azem/tsc",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/meza.git",
+    "directory": "turbo/tools/tsc"
+  },
+  "license": "Apache-2.0",
+  "author": "@ingniius <ingniius@pm.me>",
+  "contributors": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "homepage": "https://github.com/ingniius/meza#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/meza/issues"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    "./base": "./src/base.json",
+    "./vue": "./src/vue.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "package.json",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

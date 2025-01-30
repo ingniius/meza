@@ -1,0 +1,11 @@
+::-webkit-scrollbar {
+  @apply size-[6px] bg-transparent;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[var(--ui-bg)];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-md bg-[var(--ui-border-muted)] hover:bg-[var(--ui-border-accented)];
+}
