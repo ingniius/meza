@@ -5,6 +5,14 @@
   "packageManager": "pnpm@10.7.1",
   "author": "@omaucf <omaucf@pm.me>",
   "license": "MIT",
+  "homepage": "https://github.com/ingniius/meza#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/meza.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ingniius/meza/issues"
+  },
   "engines": {
     "node": ">=20.0.0",
     "npm": ">=10.0.0"
