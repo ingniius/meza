@@ -4,6 +4,7 @@
   "private": true,
   "packageManager": "pnpm@10.7.1",
   "author": "@omaucf <omaucf@pm.me>",
+  "license": "MIT",
   "engines": {
     "node": ">=20.0.0",
     "npm": ">=10.0.0"
