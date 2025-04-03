@@ -6,3 +6,4 @@ catalog:
   eslint: 9.23.0
   unbuild: 2.0.0
   typescript: 5.6.3
+  vitest: 3.1.1
