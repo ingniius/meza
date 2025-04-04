@@ -28,6 +28,7 @@
     "clean": "turbo clean"
   },
   "devDependencies": {
+    "@azem/tsc": "workspace:*",
     "@changesets/changelog-git": "^0.2.1",
     "@changesets/cli": "^2.28.1",
     "@commitlint/cli": "^19.8.0",
