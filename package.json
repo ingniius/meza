@@ -28,6 +28,7 @@
     "clean": "turbo clean"
   },
   "devDependencies": {
+    "@azem/eslint": "workspace:*",
     "@azem/prettier": "workspace:*",
     "@azem/tsc": "workspace:*",
     "@changesets/changelog-git": "^0.2.1",
