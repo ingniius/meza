@@ -22,7 +22,7 @@
     "start": "turbo start",
     "dev": "turbo dev",
     "build": "turbo build",
-    "eslint": "turbo eslint",
+    "lint": "turbo lint",
     "test": "turbo test",
     "typecheck": "turbo typecheck",
     "clean": "turbo clean"
@@ -43,7 +43,7 @@
     "turbo": "^2.5.0",
     "typescript": "catalog:",
     "unbuild": "catalog:",
-    "vite": "^6.2.4",
+    "vite": "^6.2.5",
     "vitest": "catalog:"
   },
   "pnpm": {
