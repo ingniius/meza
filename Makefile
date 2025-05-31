@@ -4,6 +4,14 @@ artisan.serve:
 artisan.key:
 	@php artisan key:generate --ansi
 
+# CHANGESET
+changeset.add:
+	@pnpm changeset add
+changeset.version:
+	@pnpm changeset version
+changeset.publish:
+	@pnpm changeset publish
+
 # COMPOSER
 composer.dev:
 	@pnpm concurrently -c "#93c5fd,#c4b5fd,#fb7185,#fdba74" \
