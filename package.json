@@ -8,6 +8,7 @@
         "npm": ">=10.0.0"
     },
     "scripts": {
+        "prepare": "husky || true",
         "dev": "vite",
         "build": "vite build",
         "lint": "eslint ./resources/**/*.{css,js} --fix",
@@ -25,6 +26,7 @@
         "concurrently": "^9.1.2",
         "eslint": "^9.28.0",
         "eslint-plugin-format": "^1.0.1",
+        "husky": "^9.1.7",
         "laravel-vite-plugin": "^1.2.0",
         "rimraf": "^6.0.1",
         "tailwindcss": "^4.1.8",
