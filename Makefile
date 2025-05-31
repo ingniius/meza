@@ -1,3 +1,9 @@
+# ARTISAN
+artisan.serve:
+	@php artisan serve $(filter-out $@,$(MAKECMDGOALS))
+artisan.key:
+	@php artisan key:generate --ansi
+
 # COMPOSER
 composer.dev:
 	@pnpm concurrently -c "#93c5fd,#c4b5fd,#fb7185,#fdba74" \
