@@ -1,0 +1,22 @@
+services:
+    app:
+        container_name: gigatr-app
+        image: gigatr-app
+        build:
+            context: .
+            dockerfile: Dockerfile
+        environment:
+            SERVICE_NAME: app
+            SERVICE_TAGS: dev
+        ports:
+            - "9000:9000"
+        networks:
+            - backend
+        volumes:
+            - .:/var/www
+        restart: unless-stopped
+        tty: true
+
+networks:
+    backend:
+        driver: bridge
