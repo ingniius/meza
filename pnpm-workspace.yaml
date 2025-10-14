@@ -1,0 +1,21 @@
+packages:
+  - apps/*
+  - packages/*
+  - turbo/tools/*
+
+ignoredBuiltDependencies:
+  - "@prisma/engines"
+  - core-js-pure
+  - esbuild
+  - prisma
+  - prisma-zod-generator
+  - protobufjs
+
+onlyBuiltDependencies:
+  - "@prisma/client"
+  - "@tailwindcss/oxide"
+  - sharp
+
+publicHoistPattern:
+  - "@prisma/client"
+  - prisma

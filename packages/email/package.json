@@ -1,0 +1,23 @@
+{
+  "name": "@azem/email",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./keys": "./keys.ts",
+    ".": "./index.ts",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "lint": "eslint . --fix --cache --cache-location .cache/.eslintcache",
+    "typecheck": "tsc --noEmit",
+    "clean": "git clean -xdf .cache .turbo node_modules"
+  },
+  "dependencies": {
+    "@react-email/components": "^0.5.7",
+    "@t3-oss/env-nextjs": "^0.13.8",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "resend": "^6.1.3",
+    "zod": "^4.1.12"
+  }
+}

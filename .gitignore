@@ -1,0 +1,44 @@
+# outputs
+.cache
+.next
+.out
+generated
+next-env.d.ts
+
+# environment
+.env
+.env.*
+!.env.example
+
+# node
+node_modules
+.pnp
+.pnp.js
+
+# testing
+coverage
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# temporary
+__tmp__
+tmp
+
+# ide
+.vscode
+.idea
+.zed
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# system
+.DS_Store
+*.pem
+
+# workspace
+.turbo
+.vercel

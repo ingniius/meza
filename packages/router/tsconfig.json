@@ -1,0 +1,11 @@
+{
+  "extends": "@azem/tsc/react.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@azem/*": ["../../packages/*"]
+    }
+  },
+  "include": ["**/*.json", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}

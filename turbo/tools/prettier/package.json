@@ -1,0 +1,16 @@
+{
+  "name": "@azem/prettier",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./base.mjs": "./base.mjs",
+    "./turbo.mjs": "./turbo.mjs",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "clean": "git clean -xdf .turbo node_modules"
+  },
+  "peerDependencies": {
+    "prettier": ">=3"
+  }
+}

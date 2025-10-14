@@ -1,0 +1,8 @@
+model Page {
+  id   String @id
+  name String
+
+  content String?
+
+  createdAt DateTime @default(now())
+}

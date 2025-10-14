@@ -1,0 +1,22 @@
+model Account {
+  id         String @id
+  accountId  String
+  providerId String
+  userId     String
+
+  password     String?
+  scope        String?
+  accessToken  String?
+  idToken      String?
+  refreshToken String?
+
+  accessTokenExpiresAt  DateTime?
+  refreshTokenExpiresAt DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("account")
+}

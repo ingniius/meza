@@ -1,0 +1,41 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "globalDependencies": ["**/.env"],
+  "ui": "tui",
+  "envMode": "loose",
+  "tasks": {
+    "start": { "persistent": true },
+    "dev": { "cache": false, "persistent": true },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**", "next-env.d.ts"]
+    },
+    "lint": { "outputs": [".cache/.eslintcache"] },
+    "test": { "outputs": ["coverage"] },
+    "analyze": { "dependsOn": ["^analyze"] },
+    "translate": { "dependsOn": ["^translate"], "cache": false },
+    "typecheck": { "outputs": [".cache/tsbuildinfo.json"] },
+    "clean": { "cache": false },
+    "//#dry": { "cache": false }
+  },
+  "globalPassThroughEnv": [
+    "NODE_ENV",
+    "ANALYZE",
+    "HOST",
+    "PORT",
+    "AUTH_SECRET",
+    "DATABASE_URL",
+    "GITHUB_CLIENT_ID",
+    "GITHUB_CLIENT_SECRET",
+    "RESEND_FROM",
+    "RESEND_TOKEN",
+    "NEXT_PUBLIC_NAME",
+    "NEXT_PUBLIC_URL",
+    "NEXT_RUNTIME",
+    "VERCEL",
+    "VERCEL_ENV",
+    "VERCEL_PROJECT_PRODUCTION_URL",
+    "VERCEL_REGION",
+    "VERCEL_URL"
+  ]
+}

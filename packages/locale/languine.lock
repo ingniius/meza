@@ -1,0 +1,5 @@
+version: 1
+files:
+  dictionaries/en.json:
+    common.greeting: c3d57e2a5d6ecc91465d4db650095e1e
+    ui.copyright: d7a11c53df147424ef60551edd643e86

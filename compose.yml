@@ -1,0 +1,38 @@
+services:
+  app:
+    container_name: app
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NODE_VERSION: 22
+        APP_DIRNAME: next
+        PROJECT: "@azem/next"
+    ports:
+      - "127.0.0.1:3001:3000"
+    networks:
+      - infra
+    restart: unless-stopped
+
+  db:
+    container_name: db
+    image: postgres:15-alpine
+    environment:
+      PGDATA: /data/postgres
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: app
+    ports:
+      - "127.0.0.1:5432:5432"
+    networks:
+      - infra
+    volumes:
+      - data:/data/postgres
+    restart: unless-stopped
+
+networks:
+  infra:
+    driver: bridge
+
+volumes:
+  data:
