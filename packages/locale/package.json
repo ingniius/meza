@@ -1,0 +1,34 @@
+{
+  "name": "@azem/locale",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./proxy": "./proxy.ts",
+    ".": "./index.ts",
+    "./dictionaries/en.json": "./dictionaries/en.json",
+    "./dictionaries/fr.json": "./dictionaries/fr.json",
+    "./dictionaries/pt.json": "./dictionaries/pt.json",
+    "./languine.json": "./languine.json",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "translate": "languine translate",
+    "lint": "eslint . --fix --cache --cache-location .cache/.eslintcache",
+    "typecheck": "tsc --noEmit",
+    "clean": "git clean -xdf .cache .turbo node_modules"
+  },
+  "peerDependencies": {
+    "@azem/config": "workspace:*"
+  },
+  "dependencies": {
+    "@formatjs/intl-localematcher": "^0.6.2",
+    "negotiator": "^1.0.0",
+    "next-international": "^1.3.1",
+    "react": "^19.2.0",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/negotiator": "^0.6.4",
+    "languine": "^3.1.4"
+  }
+}

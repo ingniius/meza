@@ -1,0 +1,8 @@
+{
+  "extends": "@azem/tsc/base.json",
+  "compilerOptions": {
+    "baseUrl": "."
+  },
+  "include": ["**/*.json", "**/*.ts"],
+  "exclude": ["node_modules"]
+}

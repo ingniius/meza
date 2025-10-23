@@ -1,0 +1,13 @@
+services:
+  next:
+    container_name: next
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile
+      args:
+        NODE_VERSION: 22
+        APP_DIRNAME: next
+        PROJECT: "@azem/next"
+    ports:
+      - 3001:3000
+    restart: unless-stopped

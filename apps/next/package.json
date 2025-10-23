@@ -1,0 +1,24 @@
+{
+  "name": "@azem/next",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "dotenv-run -- next start",
+    "dev": "dotenv-run -- next dev --turbopack",
+    "build": "dotenv-run -- next build --turbopack",
+    "lint": "eslint . --fix --cache --cache-location .cache/.eslintcache",
+    "analyze": "ANALYZE=true dotenv-run -- run-s build",
+    "typecheck": "tsc --noEmit",
+    "clean": "git clean -xdf .cache .next .turbo node_modules"
+  },
+  "dependencies": {
+    "@azem/config": "workspace:*",
+    "@azem/locale": "workspace:*",
+    "@azem/ui": "workspace:*",
+    "@t3-oss/env-nextjs": "^0.13.8",
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^4.1.12"
+  }
+}

@@ -1,0 +1,13 @@
+packages:
+  - apps/*
+  - packages/*
+  - turbo/tools/*
+
+ignoredBuiltDependencies:
+  - core-js-pure
+  - esbuild
+  - protobufjs
+
+onlyBuiltDependencies:
+  - "@tailwindcss/oxide"
+  - sharp

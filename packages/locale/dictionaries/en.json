@@ -1,0 +1,8 @@
+{
+  "common": {
+    "greeting": "Hi, {{name}}"
+  },
+  "ui": {
+    "copyright": "© Copyright {{year}} {{product}}. All Rights Reserved."
+  }
+}
